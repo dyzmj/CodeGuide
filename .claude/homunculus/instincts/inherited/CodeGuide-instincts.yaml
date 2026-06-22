@@ -1,0 +1,362 @@
+# Instincts generated from https://github.com/dyzmj/CodeGuide
+# Generated: 2026-05-15T01:10:28.262Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CodeGuide-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Commit Length
+
+## Action
+
+Keep commit messages concise (~45 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 4 commits
+
+---
+id: CodeGuide-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: CodeGuide-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CodeGuide-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CodeGuide-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CodeGuide-workflow-add-new-documentation-section
+trigger: "when doing add new documentation section"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/dyzmj/CodeGuide
+---
+
+# CodeGuide Workflow Add New Documentation Section
+
+## Action
+
+Follow the add-new-documentation-section workflow:
+1. Update docs/.vuepress/config.js to register the new section/article in navigation or sidebar.
+2. Add or update markdown file in docs/md/ or docs/md/project/ with the new content.
+3. Add related images to docs/.vuepress/public/images/article/ in an appropriate subfolder.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/.vuepress/config.js, docs/md/**/*.md, docs/.vuepress/public/images/article/**/*
+
+---
+id: codeguide-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct File Naming
+
+## Action
+
+Name the file using kebab-case (e.g., my-component.js)
+
+## Evidence
+
+- Pattern in namingConventions.files: kebab-case
+
+---
+id: codeguide-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Function Naming
+
+## Action
+
+Use camelCase for the function name (e.g., fetchData)
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: codeguide-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Class Naming
+
+## Action
+
+Use PascalCase for the class name (e.g., UserProfile)
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: codeguide-instinct-constant-naming
+trigger: "When defining a constant value"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for the constant name (e.g., MAX_RETRIES)
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: codeguide-instinct-import-style
+trigger: "When importing modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import x from '../module')
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: codeguide-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export { myFunction })
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: codeguide-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Test Location
+
+## Action
+
+Place test files in a separate test location (not inside src/)
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: codeguide-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Git Commit Format
+
+## Action
+
+Start the commit message with a type prefix (e.g., feat:), followed by a Chinese or English description
+
+## Evidence
+
+- Seen in commit: feat：《AI MCP Gateway 网关服务系统》第2-4节：streamable协议应用案例
+- Seen in commit: feat：WaLiSSH - AI Shell 智能终端
+
+---
+id: codeguide-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, typically around 45 characters
+
+## Evidence
+
+- Pattern in commits.averageLength: 45
+
+---
+id: codeguide-instinct-add-doc-section-config
+trigger: "When adding a new documentation section or article"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Add Doc Section Config
+
+## Action
+
+Update docs/.vuepress/config.js to register the new section/article in navigation or sidebar
+
+## Evidence
+
+- Workflow: add-new-documentation-section
+- Example commit: Update docs/.vuepress/config.js to register the new section/article in navigation or sidebar.
+
+---
+id: codeguide-instinct-add-doc-section-md
+trigger: "When adding a new documentation section or article"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Add Doc Section Md
+
+## Action
+
+Add or update a markdown file in docs/md/ or docs/md/project/ with the new content
+
+## Evidence
+
+- Workflow: add-new-documentation-section
+- Example commit: Add or update markdown file in docs/md/ or docs/md/project/ with the new content.
+
+---
+id: codeguide-instinct-add-doc-section-images
+trigger: "When adding a new documentation section or article"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: dyzmj/CodeGuide
+---
+
+# Codeguide Instinct Add Doc Section Images
+
+## Action
+
+Add related images to docs/.vuepress/public/images/article/ in an appropriate subfolder
+
+## Evidence
+
+- Workflow: add-new-documentation-section
+- Example commit: Add related images to docs/.vuepress/public/images/article/ in an appropriate subfolder.
+
